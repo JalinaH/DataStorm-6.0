@@ -5,3 +5,4 @@ xgboost==3.0.0
 scikit-learn==1.6.1
 matplotlib==3.10.1
 seaborn==0.13.2
+pathlib==1.0.1
