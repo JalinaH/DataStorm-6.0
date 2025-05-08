@@ -15,7 +15,7 @@ st.set_page_config(
 
 # --- Load Model and Data ---
 @st.cache_resource # Cache the model loading
-def load_model(model_path='nill_prediction_model.pkl'):
+def load_model(model_path='../model/nill_prediction_model.pkl'):
     try:
         with open(model_path, 'rb') as f:
             model = pickle.load(f)
@@ -28,7 +28,7 @@ def load_model(model_path='nill_prediction_model.pkl'):
         return None
 
 @st.cache_data # Cache data loading
-def load_data(train_path='train_storming_round.csv', test_path='test_storming_round.csv'):
+def load_data(train_path='../data/train_storming_round.csv', test_path='../data/test_storming_round.csv'):
     try:
         train_df = pd.read_csv(train_path)
         test_df = pd.read_csv(test_path)
